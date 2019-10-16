@@ -1,0 +1,24 @@
+\section{Smart Contracts}\label{sec:smartContracts}
+
+Blockchain 2.0 begins with the innovative proposal of smart contracts in 2013, and all range of possible financial applications \cite{greve2018blockchain}. A smart contract is a computerized transaction protocol that executes the terms of a contract \cite{szabo1997idea}. Its model was proposed a long time ago and now this concept can be implemented with blockchain.
+
+The term \acf{SC} has been standardized by Nick Szabo in the 90s \cite{greve2018blockchain}. It means: “an internal transaction protocol format that executes the terms of a contract. Their overall goals are ensure common contractual conditions (such as payment terms, liens, confidentiality and even compliance), minimize malicious and accidental exceptions and the need for reliable intermediaries. Related economic objectives include reducing fraud losses, arbitration and execution costs, and other transaction costs.” \cite{szabo1997idea}.
+
+A smart contract acts as a reliable distributed application. and gets its security from the blockchain and the underlying consensus between pairs. This closely resembles the familiar approach of building resilient applications with state machine replication (SMR) \cite{schneider1990implementing}.
+
+Smart contract searches can be classified into two types: development and evaluation. Development can be development of smart contract or smart contract platform development. Recently, many smart contracts have been implemented on the Ethereum blockchain \cite{wood2018secure}. Regarding the platform development, many smart contracting platforms like Ethereum \cite{wood2018secure} and Hawk \cite{kosbaa2016theblockchain} are emerging \cite{zheng2016blockchain}. Evaluation means code analysis and performance evaluation. Errors in smart contracting can bring disastrous damage. Smart contract attack analysis is very important. On the other hand, smart contract performance is also vital to the contract. With the rapid development of blockchain technology, more and more smart contract based applications will be placed in use and companies need to consider performance of application \cite{zheng2016blockchain}.
+
+In the blockchain, smart contracts are created as scripts, stored in with exclusive addressing on the blockchain itself \cite{greve2018blockchain}. They are triggered when addressing a transaction to it. Then the script is executed independently and automatically, as prescribed in all nodes in the network according to the data included in the transaction \cite{christidis2016blockchains}.
+
+\subsection{Smart Contracts Security}\label{sec:seguranca}
+Smart contracts interpret the code objectively - "The Code is the law". However, a code error was the target of cyber attack, resulting in a deviation of about \$50 million dollars, forcing Ethereum to perform a hard fork to perform a recovery \cite{bashir2018mastering}. Performing recoveries like this is not trivial, so the risks must be evaluated and minimized.
+
+Smart contracts should be concerned with blockchain threats:
+\begin{itemize}
+\item State of contract.
+\item Random generation.
+\item Time Restrictions.
+\end{itemize}
+
+Regarding the status of the contract, field and balance values determines the smart contract state. A user when invoking it may not have certainty under its state, as other transactions may modify it or a fork may have occurred. In some cases, this can create vulnerabilities and lead to asset theft. In random generation, some contracts generate pseudo-random numbers with the same seed for all miners. This allows everyone to have the same view as Blockchain, providing
+a malicious miner to influence the network. About time restriction, if a miner holds a stake in a contract, he can gain an advantage by choosing an appropriate time stamp for the block he is exploring \cite{greve2018blockchain}.

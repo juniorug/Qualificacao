@@ -1,0 +1,30 @@
+\section{Public Blockchain Versus Private Blockchain}\label{sec:versus}
+
+Blockchain networks can be categorized into two groups: public (or permissionless) blockchain, and private (or federated or permissioned) blockchain (with permission and controlled access) \cite{greve2018blockchain}.
+
+\subsection{Public blockchain}\label{sec:blockchainPublica}
+On a public or permissionless blockchain, any person can participate without a specific identity. Public blockchains typically involve a native cryptocurrency and often use \acf{PoW} consensus and economic incentives \cite{androulaki2018hyperledger}. Public blockchain can be audited by anyone, and each node has as much transmission power as any other. For a transaction to be considered valid, it must be authorized by all nodes constituents via the consensus process. As long as each node meets protocol-specific stipulations, their transactions can be validated and thus added to the chain \cite{Comstor2018}.
+
+As the P2P network node set is unknown, its membership is dynamic, allowing random node entrances and exits and also anonymity of them. Blockchain can act in global scale, without the control of its participants, who do not even trust each other mutually. Are examples of public blockchain the Bitcoin network, the Ethereum and several other cryptocurrencies \cite{bashir2018mastering, antonopoulos2017mastering}.
+
+\subsubsection{Consensus for Public Blockchain}\label{sec:consensoPublica}
+Due to the uncertainties regarding the participants, public blockchains generally adopt mining-based consensus mechanisms. In these mechanisms miners vie with each other for consensus leadership, using computational power, possession power over cryptocurrency or other election-relevant powers that cannot be monopolized such that the same knots always come out victorious) \cite{greve2018blockchain}.
+
+Compensation to these miners for their work is often cryptocurrencies. These incentives are critical to prevent Byzantine attacks by solving the fundamental challenge of agreement on a global scale. Currently proof of work is one of the few successful and resilient consensus approaches to Sybil attacks \cite{douceur2002sybil} (impersonation attacks, when malicious users become impersonate others).
+
+\subsection{Private Blockchain}\label{sec:blockchainPrivada}
+Permissioned, federated or private blockchains, on the other hand, perform a blockchain between a set of known and identified participants. A private blockchain provides a way to protect the interactions between a group of entities that have a common goal but that don't totally trust each other, like companies that trade funds, assets or information. Relying on peer identities, one private blockchain may use the traditional consensus of \acf{BFT} \cite{androulaki2018hyperledger}.
+
+Federated blockchain has its known composition. It is formed by $n$ processes whose inputs and outputs are subject to permissions. Participants are identified, authenticated and authorized. This model of blockchain aims to better serve corporate or private interests where participants have well-defined roles and can even organize themselves into groups. Examples of private blockchain are Hyperledger Fabric \cite{cachin2016architecture} and some other projects \cite{cachin2017blockchain}.
+
+\subsubsection{Consensus for Private Blockchain}\label{sec:consensoPrivada}
+Due to the fact that it is a controlled network with $n$ known participants and identified by the federation, classic \acf{BFT} protocols and deterministic Byzantine consensus can be adapted to the blockchain \cite{androulaki2018hyperledger}.
+
+In addition, there is no need to use incentives to agreement, as the federation of stakeholders can establish its own financial model of remuneration. Incentives, however, may be used for other purposes but, different from evidence-based consensus, they are not essential to consensus \cite{greve2018blockchain}.
+
+In the \ac{BFT} literature, replication consistency is maintained by two principles:
+
+\begin{itemize}
+\item No mistake: Leaders are prevented from making mistakes, so there is only one possible proposal per leader per rating.
+\item Proposal Security: A (higher-ranked) proposal can extend, but not modify, any lower-ranking compromised log prefix \cite{abraham2017blockchain}.
+\end{itemize}
