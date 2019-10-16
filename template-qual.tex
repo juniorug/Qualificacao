@@ -1,33 +1,3 @@
-%% Template para dissertacao/tese na classe ifbathesis
-%% versao 1.0
-%% (c) 2005 Paulo G. S. Fonseca
-%% (c) 2010 Alirío Sá
-%% (c) 2012 Antonio Terceiro
-%% (c) 2014 Christina von Flach
-%% (c) 2016 Alcemir Santos
-%% (c) 2018 Luis Gustavo Cardoso Lima
-%% https://github.com/gsort/ppgesp-ifba-latex
-
-%% Carrega a classe ifbathesis
-%% Opcoes: * Idiomas
-%%           pt   - portugues (padrao)
-%%           en   - ingles
-%%         * Tipo do Texto
-%%           bsc  - para monografias de graduacao
-%%           msc  - para dissertacoes de mestrado (padrao)
-%%           qual - exame de qualificacao de mestrado
-%%           prop - exame de qualificacao de doutorado
-%%           phd  - para teses de doutorado
-%%         * Media
-%%           scr  - para versao eletronica (PDF) / consulte o guia do usuario
-%%         * Estilo
-%%           classic - estilo original a la TAOCP (deprecated) - apesar de deprecated, manter esse.
-%%           std     - novo estilo a la CUP (padrao)
-%%         * Paginacao
-%%           oneside - para impressao em face unica
-%%           twoside - para impressao em frente e verso (padrao)
-
-% Atenção: Manter 'classic' na declaracao abaixo:
 \documentclass[en, qual, classic, a4paper]{ifbathesis}
 
 %% Preambulo:
@@ -37,6 +7,7 @@
 \usepackage{lipsum}
 \usepackage{hyphenat}
 % \usepackage[usenames, dvipsnames, table]{xcolor}
+\usepackage{float}
 \usepackage{booktabs}
 \usepackage{pifont}
 \usepackage{multirow}
@@ -53,84 +24,40 @@
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
 
-% Universidade
+
 \university{Instituto Federal da Bahia}
-
-% Endereco (cidade)
 \address{Salvador}
-
-% Instituto ou Centro Academico
-% nome do departamento ou  área
 \institute{Departamento de Pós-Graduação e Qualificação}
-
-% Nome da biblioteca - usado na ficha catalografica
 \library{Biblioteca Professor Raul Varella Seixas}
-
-% Programa de pos-graduacao
 \program{Programa de P\'{o}s-Gradua\c{c}\~{a}o em Engenharia de Sistemas e Produtos}
-
-% Area de titulacao
 \majorfield{Engenharia de Sistemas e Produtos}
-
-% Titulo da dissertacao
 \title{A blockchain framework for traceability in supply chain management}
 
 % Data da defesa
 % e.g. \date{19 de fevereiro de 2013}
-\date{15 de outubro de 2019}
+\date{30 de outubro de 2019}
 % e.g. \defenseyear{2013}
 \defenseyear{2019}
 
 % Autor
-% e.g. \author{Jose da Silva}
 \author{Edivaldo Mascarenhas Ferreira de Jesus Júnior}
 
 % Orientador(a)
-% Opcao: [f] - para orientador do sexo feminino
-% e.g. \adviser[f]{Profa. Dra. Maria Santos}
 \adviser{Manoel Carvalho Marques Neto}
-
-% Orientador(a)
-% Opcao: [f] - para orientador do sexo feminino
-% e.g. \coadviser{Prof. Dr. Pedro Pedreira}
-% Comente se nao ha co-orientador
 \coadviser{Allan Edgard Silva Freitas}
 
 %% Inicio do documento
 \begin{document}
-
 \ppgespfrontpage
-
-%% Parte pre-textual
 \frontmatter
-
 \ppgesppresentationpage
 
 
-%%%%%%%%%%%%%%%%%%%%%
-% Resumo Portugues e Inglês
-%%%%%%%%%%%%%%%%%%%%%
 \input{sections/abstract}
-
-%%%%%%%%%%%%%%%%%%%
-% Sumario / Indice
-%%%%%%%%%%%%%%%%%%%
-
-% Comente para ocultar
 \tableofcontents
-
-% Lista de figuras
-% Comente para ocultar
 \listoffigures
-
-% Lista de tabelas
-% Comente para ocultar
 \listoftables
-
 \chapter*{Lista de Siglas}
-
-% Sintaxe da lista de acordo com a documentação do pacote `acronym'
-% documentação: http://mirror.unl.edu/ctan/macros/latex/contrib/acronym/acronym.pdf
 \begin{acronym}[PPGESP]
     \acro{PPGESP}{Programa de Pós-Graduação em Engenharia de Sistemas e Produtos}
     \acro{CNPq}{Conselho Nacional de Desenvolvimento Científico e Tecnológico}
@@ -139,41 +66,25 @@
     \acro{BFT}{Byzantine fault tolerance}
     \acro{SC}{smart contract}
     \acro{SCM-BP}{Supply Chain Management - Blockchain Platform}
+    \acro{TAM}{Technology Acceptance Model}
 \end{acronym}
 
 %% Parte textual
 \mainmatter
 
-% Eh aconselhavel criar cada capitulo em um arquivo separado, digamos
-% "capitulo1.tex", "capitulo2.tex", ... "capituloN.tex" e depois
-% inclui-los com:
-% \include{capitulo1}
-% \include{capitulo2}
-% ...
-% \include{capituloN}
-%
-% Importante: 
-% Use \xchapter{}{} ao inves de \chapter{}; se n�o quiser colocar texto antes do inicio do capitulo, use \xchapter{texto}{}.
-
 %Seções
 \input{chapters/1_INTRODUCTION/1_INTRODUCTION.tex}
 \input{chapters/2_THEORETICAL_BACKGROUND/2_THEORETICAL_BACKGROUND.tex}
-%MINE
 \input{chapters/3_TECHNICAL_SPECIFICATION/3_TECHNICAL_SPECIFICATION.tex}
-
 
 %% Parte pos-textual
 \backmatter
 
 % Bibliografia
-% � aconselh�vel utilizar o BibTeX a partir de um arquivo, digamos "biblio.bib".
-% Para ajuda na cria��o do arquivo .bib e utiliza��o do BibTeX, recorra ao
-% BibTeXpress em www.cin.ufpe.br/~paguso/bibtexpress
 \bibliographystyle{abntex2-alf}
 \bibliography{biblio}
 
 % Apendices
-% Comente se naoo houver apendices
 \appendix
 
 %\lipsum
@@ -185,14 +96,7 @@
 % ...
 % \include{apendiceM}
 
-\include{apendices/A1_dataStructure}
-\include{apendices/A2_userCreationFields}
-\include{apendices/A3_activities}
-\include{apendices/A4_userStories}
-\include{apendices/A5_nonFunctionalRequirements}
-
-
-
+\include{appendix}
 %% Fim do documento
 \end{document}
 %------------------------------------------------------------------------------------------%

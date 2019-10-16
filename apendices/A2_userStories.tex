@@ -1,0 +1,41 @@
+\section{User stories}{} %sem preambulo
+
+The table \ref{table:userStories} present all the user stories for artifacts development, used in the system and managed according to agile methodologies.
+
+\begin{table}[H]
+\caption{\ac{SCM-BP} User Stories}
+\label{table:userStories}
+    \begin{tabular}{|l|p{13.5cm}|}
+    \hline 
+    US-1  & As an administrator, clicking “new” on the supply chain list page takes you to the chain configuration page, with empty settings (no phases, subphases, and fields).\\
+    \hline 
+    US-2  & As an administrator, clicking “edit” on the supply chain list page takes you to the chain configuration page, with the settings filled in (with phases, subphases, and fields already registered). \\
+    \hline
+    US-3  & As an administrator, when you click delete on the supply chain list page, a modal should appear requesting deletion confirmation.\\
+    \hline
+    US-4  & As an administrator, when you click confirm deletion on the supply chain list page, an alert should appear stating the deletion result: alert-success or alert-danger.\\
+    \hline
+    US-5  & As an administrator, on the creation or editing screens of a chain, the administrator must tell from each section which user types can enter information in that section.\\
+    \hline
+    US-6  & As an administrator, clicking new on the User list page takes you to the user creation page with its empty settings.\\
+    \hline
+    US-7  & As an administrator, on the user creation page you have to enter the type of user (Admin, Producer, Manufacturer, Distributor, Wholesaler, Retailer, End User).\\
+    \hline
+    US-8  & As an administrator, clicking “edit” on the User list page takes you to the user creation page, with the settings filled in (with the previously entered data).\\
+    \hline
+    US-9  & As an administrator, when you click delete on the User list page, a modal should appear asking for deletion confirmation.\\
+    \hline
+    US-10 & As an administrator, when clicking confirm deletion on the User list page, an alert should appear stating the deletion result: alert-success or alert-danger.\\
+    \hline
+    US-11 & As "Member" User (Admin, Producer, Manufacturer, Distributor, Wholesaler, Retailer), clicking Move Asset takes you to the information entry page in the chain.\\
+    \hline
+    US-12 & As "Member", each user can only enter information regarding the allowed phase in the access rules (eg a distributor cannot enter exploration information) as defined in the use case 5.\\
+    \hline
+    US-13 & As any user (Admin, Member or End User), clicking Track Asset will take you to a page with a list of all assets paged and filtered by date in descending order (most current to oldest).\\
+    \hline
+    US-14 & As any user (Admin, Member or End User), by clicking on “Track Asset”, the user can enter in the input search an Id to search.\\
+    \hline
+    US-15 & As any user (Admin, Member or End User), by clicking on “Track”, the user will go to a page with all information of the respective asset, from its conception to the current state.\\
+    \hline
+    \end{tabular}
+\end{table}

@@ -1,0 +1,24 @@
+\section{Non-functional requirements}{} %sem preambulo
+
+\begin{table}[H]
+\caption{Non-functional requirements of \ac{SCM-BP}}
+\label{table:rnf}
+\begin{tabular}{|p{3cm}|p{12cm}|}
+\hline
+NF-1: Usability & The available product, corresponding APIs and documentation should be clear enough to allow for the developers to perform the implementation.\\
+\hline
+NF-2:  \newline Performance &  \textbf{Speed and latency}:  The throughput and latency on Hyperledger have already been tested, and the throughput is not expected to be as high as in a centralized data system. But, overall, the time to synchronize the information from one company to another might increase; The goal is to make the product be as fast as needed to support the businesses, even if it does not have better performance than other alternatives, since what the target here is the addition of new functionalities (shared ledger); \newline
+\textbf{Precision and accuracy}: The product shall record the data just as it was entered, and predictions as to whether a product has any mismatching entries shall always be justifiable; \newline
+\textbf{Reliability and availability}: The product shall not always be available unless all of the nodes fail at once, which is almost impossible, unless a coordinated attack were to happen; If some of the nodes happen to fail, the response time of the system might be lower than expected; \newline
+\textbf{Scalability}: The product should scale to hundreds of companies, which would require a similar number of nodes;
+\\
+\hline
+NF-3:  \newline Maintainability and portability & The product is expected to run on Linux based systems, compatible with the Docker, nodejs and golang versions that Hyperledger Fabric uses. More specifically, Oracle Cloud services have servers with the required setup for this. Creating new nodes or moving an existing one should be an easy process, without much complication, other than starting the node software on the environment, and closing an existing one, if needed. \\
+\hline
+NF-4: Security & 
+\textbf{Privacy}: The system must ensure appropriate visibility of transactions and products, which might be privacy sensitive; sharing some data would pose a threat or could possibly have negative effects for some of the companies; otherwise, transactions should also be secure, authenticated and verifiable; \newline
+\textbf{Immutability}: No one can make changes to the contents of the ledger;\newline
+\textbf{Authorization}: All changes to any data should be approved by the people that possess the data or will be affected by these changes directly. A shipment delivery transaction should, for instance, be approved by both the person delivering and the person receiving the shipment. \\
+\hline
+\end{tabular}
+\end{table}
