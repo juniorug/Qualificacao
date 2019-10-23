@@ -1,0 +1,42 @@
+\section{Actions And Actors}\label{sec:actionsAndActors}
+
+The system is governed by a set of rules. These rules define how users are to interact with the system, and how the data is shared among the users. Moreover, once the rules are stored in the blockchain, they can not be altered without broadcasting to all nodes and verified by most of them.
+%%% SETUP
+
+\subsection{Setup}\label{sec:Setup}
+Setup is the set of actions to configure the application. Setup phase is when a new supply chain is created or an existing one is updated or deleted. Users can also be created, updated and deleted by setup actions. When creating or editing a supply chain, Admin users will define which steps, sub-steps and information that the supply chain flow will contain, and which users from member group is allowed to add info and move asset to each step in the logistics network.
+
+\subsubsection{Administrator}\label{sec:Administrator}
+Administrator is the only user in Admin group. This actor has access to all areas of the program and have the same abilities that all other user types (configure, move asset and view flow), but his main responsibility is to configure the application, performing the setup actions. 
+
+
+%%% DATA INSERTION
+
+\subsection{Data Insertion}\label{sec:DataInsertion}
+
+Data insertion are the actions that will fill the supply chain flow with data. Once a new supply chain is created by the admin user, it is ready to be populated with information. Member and admin users are responsible for perform these actions. In Data Insertion phase users can update information from a specific step and sub-step and move assets depending on the rules applied in the setup phase.
+
+\subsubsection{Raw material/Producer}\label{sec:Rawmaterial}
+Providers of raw materials, the quarrier or miner, a gravel producing company. Responsible for the extraction of raw materials (natural resources) and how they are firstly processed (pre-processed) by the suppliers or vendors in order to be delivered to the next stage.
+
+\subsubsection{Manufacturer}\label{sec:Manufacturer}
+The same as raw material/producer for gravel, or a machinery/equipment producer. Responsible for the process of converting the raw materials into products that are ready to sell.
+
+\subsubsection{Distributor}\label{sec:Distributor}
+Building materials shop or distributor. This actor is responsible of moving the output of the manufacturer (e.g., the product) from manufacturer’s site to a wholesaler and/or retailers.
+
+\subsubsection{Wholesaler}\label{sec:Wholesaler}
+Seller of gravel in large quantities, generally to businesses like building companies. Wholesalers in general do not sell products directly to the public, but to other retailers instead.
+
+\subsubsection{Retailer}\label{sec:Retailer}
+Seller of gravel in small quantities, generally to natural persons.
+
+
+%%% VISUALIZATION
+
+\subsection{Visualization}\label{sec:Visualization}
+
+Visualization actions can be performed by any user in the system but its main purpose is to provide to the end user the capability of track the flow off an asset from point of origin to point of consumption.
+
+\subsubsection{End User/ Consumer}\label{sec:EndUser}
+The buyer of gravel, either a company or a natural person. Most areas of the program for this user will be unavailable. They will be able only to view the flow of an asset in the supply chain.

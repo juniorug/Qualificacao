@@ -1,0 +1,66 @@
+\subsection{WebApp - FrondEnd}\label{sec:WebAppFrondEnd}
+WebApp - FrontEnd is a client–server computer application which the client (including the user interface and client-side logic) runs in a web browser. This is a single-page application (SPA), a web application that interacts with the user by dynamically rewriting the current page rather than loading entire new pages from a server. This approach avoids interruption of the user experience between successive pages, making the application behave more like a desktop application.
+
+The Application is build with React (also known as React.js or ReactJS). This is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. Used as a base in the development of single-page or mobile applications, React is optimal for fetching rapidly changing data that needs to be recorded. However, fetching data is only the beginning of what happens on a web page, which is why complex React applications usually require the use of additional libraries for state management, routing, and interaction with an API.
+
+The Webapp - FrontEnd is divided into two main blocks and these are classified according to the interactions: User Interaction Modules and Backend Interactions Services.
+
+\subsubsection{User Interaction}\label{sec:UserInteraction}
+The User Interaction modules are responsible for providing web pages that will be rendered on client’s web browser. These interactions are provided by web pages grouped by the following modules:
+
+\begin{itemize}
+\item Login page
+\item Application configuration module
+\item User handling module (actors - CRUD)
+\item Data entry module (forms)
+\item Data visualization module
+\item Reporting module
+\end{itemize}
+
+\subsubsubsection{Login Module}
+The Login Module is responsible for display the login and authentication alternatives pages (‘forgot my password’, ‘reset my password’, etc.).
+
+\subsubsubsection{Application configuration module}
+The Application configuration module provides the features of creation/configuration of supply chain items and supply chain flows (steps and sub-tasks).
+
+\subsubsubsection{User handling module}
+This module provides the features for creation/configuration of Actors and Roles. The table in appendix \ref{app:userCreationFields} show the fields and values for creating a user.
+
+\subsubsubsection{Data entry module}
+The Data entry module provides form pages that allow users to enter data in the application, search and move assets from a step to another.
+
+\subsubsubsection{Data visualization module}
+The Data visualization module is responsible to display the information about assets in the supply chain flow. 
+
+\subsubsubsection{Reporting Module}
+In the Reporting module users can generate reports/files containing information organized in a narrative, graphic, or tabular form, prepared on ad hoc, periodic, recurring, regular, or as required basis. Reports may refer to specific periods, events, occurrences, or subjects, and may be presented in written form or any other format.
+
+\subsubsection{Backend Interaction}\label{sec:BackendInteraction}
+Backend interactions happen via a service layer consisting of:
+
+\begin{itemize}
+\item Authentication service
+\item Application setup service
+\item User creation service (actors)
+\item Data entry service (forms)
+\item Data visualization service
+\item Reporting service
+\end{itemize}
+
+\subsubsubsection{Authentication Service}
+The function of the Authentication Service is to request information from an authenticating party, and validate it against the configured identity repository using the specified authentication module. After successful authentication, the user session is activated and can be validated across all web applications participating in an SSO environment. For example, when a user or application attempts to access a protected resource, credentials are requested by one (or more) authentication modules. Gaining access to the resource requires that the user or application be allowed based on the submitted credentials.
+
+\subsubsubsection{Application setup Service}
+Application setup service provides methods to configure and edit  supply chain items and supply chain flows, defining which steps and sub-tasks will be present in this flow and which information will be present in these steps.
+
+\subsubsubsection{User creation Service}
+This service is responsible for the creation of users and roles, to allow them to log in and use the application’s features. Only Administrators are allowed to create new users (see Actions and Actors).
+
+\subsubsubsection{Data entry Service}
+Data entry service receives data from UI forms and send them to the backend to be processed and stored.
+
+\subsubsubsection{Data visualization Service}
+Data visualization services provides information about the supply chain: Assets, users and transactions, to be used by the data visualization module.
+
+\subsubsubsection{Reporting Service}
+Report services generate files (Doc/PDF/XSL, etc...) from a specific period of time with information about the supply chain: Assets, users and transactions.

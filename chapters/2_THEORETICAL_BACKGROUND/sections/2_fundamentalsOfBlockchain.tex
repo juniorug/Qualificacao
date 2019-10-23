@@ -21,7 +21,7 @@ These properties define a general hash function. Cryptographic hash functions (o
 
 A collision occurs when two distinct inputs produce the same output. A hash function $H$ is collision resistant when it is impossible to find two values $x$ and $y$ such that $x \neq y$ and $H(x) = H(y)$ \cite{narayanan2016bitcoin}.
 
-The hide property states that, having the hash function output $y = H (x)$, there is no possible way to find out which whas the $x$ input \cite{greve2018blockchain}.
+The hide property states that, having the hash function output $y = H (x)$, there is no possible way to find out which was the $x$ input \cite{greve2018blockchain}.
 
 A hash function $H$ is considered puzzle friendliness if for each possible output value of $n$ bits $y$ if $k$ is chosen from a distribution with high min-entropy, then it is impracticable to find $x$ such that $H (k \| x) = y$ in time significantly less than $2^n$ \cite{narayanan2016bitcoin}.
 
@@ -45,7 +45,7 @@ The following two properties must be maintained:
 \item Signatures are existentially unfalsifiable: signature cannot be forged.
 \end{itemize}
 
-It is noted that generateKeys() and sign() can be random algorithms. In fact, generating keys should be randomized, because it should be generating different keys for different people. On the other hand, verify() will always be deterministic.
+It is noted that \textit{generateKeys()} and \textit{sign()} can be random algorithms. In fact, generating keys should be randomized, because it should be generating different keys for different people. On the other hand, \textit{verify()} will always be deterministic.
 
 \subsection{Consensus}\label{sec:consenso}
 The key to blockchain operation is that the network must agree collectively on the ledger's content. Instead of a central entity maintain control over information (such as a bank for example), the data is shared among all. This requires the network to maintain the consensus around the information recorded in the block chain. How this consensus is reached, affects the security and economic parameters of the protocol \cite{kostarev2017review}.
